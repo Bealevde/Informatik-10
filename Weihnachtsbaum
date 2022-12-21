@@ -1,0 +1,36 @@
+public class Weihnachtsbaum {
+  public static void Baum() {
+    // Höhe wird gemakt 
+    int hoehe = 10;
+    
+    // schleife jede reihe 
+    for (int reihe = 0; reihe < hoehe; reihe++) {
+      // wie viele Leerzeichen benötigt werden werden ermittelt 
+      int numSpaces = hoehe - reihe - 1;
+      
+      // makt Spaces
+      for (int i = 0; i < numSpaces; i++) {
+        System.out.print(" ");
+      }
+      
+      //wie viele #
+      int numHashtags = 2 * reihe + 1;
+      
+      // makt #
+      for (int i = 0; i < numHashtags; i++) {
+        System.out.print("#");
+      }
+      
+      // geht zur nächsten reihe 
+      System.out.println();
+    }
+    
+    // macht den stamm 
+    for (int i = 0; i < hoehe / 2; i++) {
+      for (int j = 0; j < hoehe - 1; j++) {
+        System.out.print(" ");
+      }
+      System.out.println("#");
+    }
+  }
+}

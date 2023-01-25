@@ -22,7 +22,7 @@ public class RNG{
         int zahl4 = 0;
         int zahl5 = 0;
         int zahl6 = 0;
-        while(oft <= 100){
+        while(oft < 100){
             int gewuerfelt = generator.nextInt(6) + 1;
             System.out.println(gewuerfelt);
             if(gewuerfelt == 1){
@@ -43,11 +43,11 @@ public class RNG{
             else if(gewuerfelt == 6){
                 zahl6 = zahl6 + 1;
             }
-            System.out.println( zahl1 + " mal wurde die 1 gewürfelt \n " + zahl2 + "mal wurde die 2 gewürfelt \n" + zahl3 + " mal wurde die 3 gewürfelt \n " + zahl4 + " mal wurde die 4 gewürfelt \n " + zahl5 + " mal wurde die 5 gewürfelt \n " + zahl6 + " mal wurde die 6 gewürfelt \n "  );
+            //System.out.println( zahl1 + " mal wurde die 1 gewürfelt \n " + zahl2 + " mal wurde die 2 gewürfelt \n" + zahl3 + " mal wurde die 3 gewürfelt \n " + zahl4 + " mal wurde die 4 gewürfelt \n " + zahl5 + " mal wurde die 5 gewürfelt \n " + zahl6 + " mal wurde die 6 gewürfelt \n "  );
 
             oft = oft + 1;
         }
-
+        System.out.println( zahl1 + " mal wurde die 1 gewürfelt \n " + zahl2 + " mal wurde die 2 gewürfelt \n" + zahl3 + " mal wurde die 3 gewürfelt \n " + zahl4 + " mal wurde die 4 gewürfelt \n " + zahl5 + " mal wurde die 5 gewürfelt \n " + zahl6 + " mal wurde die 6 gewürfelt \n "  );
         
     }
 

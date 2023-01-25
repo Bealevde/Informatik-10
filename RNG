@@ -5,40 +5,80 @@ public class RNG{
     public  RNG(){
         generator = new Random();
     }
+
     public void tafelrng(){
-            // 0 <= zuffi < 10 
-            int zuffi = generator.nextInt(6) + 1;
-            //zuffi = zuffi +1;
-            System.out.println(zuffi);
+        // 0 <= zuffi < 10 
+        int zuffi = generator.nextInt(6) + 1;
+        //zuffi = zuffi +1;
+        System.out.println(zuffi);
     }
+
+    public static void wuerfelTest(){
+        Random generator = new Random();
+        int oft = 0;
+        int zahl1 = 0; 
+        int zahl2 = 0;
+        int zahl3 = 0;
+        int zahl4 = 0;
+        int zahl5 = 0;
+        int zahl6 = 0;
+        while(oft <= 100){
+            int gewuerfelt = generator.nextInt(6) + 1;
+            System.out.println(gewuerfelt);
+            if(gewuerfelt == 1){
+                zahl1 = zahl1 + 1;
+            }
+            else if(gewuerfelt == 2){
+                zahl2 = zahl2 + 1;
+            }
+            else if(gewuerfelt == 3){
+                zahl3 = zahl3 + 1;
+            }
+            else if(gewuerfelt == 4){
+                zahl4 = zahl4 + 1;
+            }
+            else if(gewuerfelt == 5){
+                zahl5 = zahl5 + 1;
+            }
+            else if(gewuerfelt == 6){
+                zahl6 = zahl6 + 1;
+            }
+            System.out.println( zahl1 + " mal wurde die 1 gewürfelt \n " + zahl2 + "mal wurde die 2 gewürfelt \n" + zahl3 + " mal wurde die 3 gewürfelt \n " + zahl4 + " mal wurde die 4 gewürfelt \n " + zahl5 + " mal wurde die 5 gewürfelt \n " + zahl6 + " mal wurde die 6 gewürfelt \n "  );
+
+            oft = oft + 1;
+        }
+
+        
+    }
+
     public void HA(){
         //a)
         int wuerfel1 = generator.nextInt(20) + 1;
         System.out.println(wuerfel1);
-        
+
         //b)
         int wuerfel2 = generator.nextInt(20) - 10;
         System.out.println(wuerfel2);
-        
+
         //c)
         int wuerfel3 = generator.nextInt(20) - 10;
         System.out.println(wuerfel3);
-        
+
         //d)
         int wuerfel4 = generator.nextInt(6) + 1;
         int wuerfel5 = generator.nextInt(6) + 1;
         System.out.println( wuerfel4 + wuerfel5);
-        
+
         //e)
         int wuerfel6 = generator.nextInt(6) + 1;
         int wuerfel7 = generator.nextInt(6) + 1;
         int wuerfel8 = generator.nextInt(6) + 1;
         System.out.println( wuerfel7 + wuerfel6 + wuerfel8);
+        // Programmieren Sie folgende Würfel:
+        // a) ein 20-seitiger Würfel (1-20)
+        // b) ein Würfel von -10 bis +10 (einschliesslich)
+        // c) ein Würfel von -10 bis +20 (einschliesslich)
+        // d) zwei Sechseitige Würfel (2-12) Vorsicht!
+        // e) drei sechsseitige Würfel (3-18) Vorsicht!
     }    
 }
-// Programmieren Sie folgende Würfel:
-    // a) ein 20-seitiger Würfel (1-20)
-    // b) ein Würfel von -10 bis +10 (einschliesslich)
-    // c) ein Würfel von -10 bis +20 (einschliesslich)
-    // d) zwei Sechseitige Würfel (2-12) Vorsicht!
-    // e) drei sechsseitige Würfel (3-18) Vorsicht!

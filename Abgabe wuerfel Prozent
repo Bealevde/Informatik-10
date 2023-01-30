@@ -1,0 +1,54 @@
+    import java.util.Random;
+
+public class RNG{
+    
+    public static void wuerfelTest(){
+        Random generator = new Random();
+        int gewurfelt = 200;
+        int oft = 0;
+        int zahl1 = 0; 
+        int zahl2 = 0;
+        int zahl3 = 0;
+        int zahl4 = 0;
+        int zahl5 = 0;
+        int zahl6 = 0;
+        while(oft < gewurfelt){
+            int gewuerfelt = generator.nextInt(6) + 1;
+            System.out.println(gewuerfelt);
+            if(gewuerfelt == 1){
+                zahl1 = zahl1 + 1;
+            }
+            else if(gewuerfelt == 2){
+                zahl2 = zahl2 + 1;
+            }
+            else if(gewuerfelt == 3){
+                zahl3 = zahl3 + 1;
+            }
+            else if(gewuerfelt == 4){
+                zahl4 = zahl4 + 1;
+            }
+            else if(gewuerfelt == 5){
+                zahl5 = zahl5 + 1;
+            }
+            else{
+                zahl6 = zahl6 + 1;
+            }
+            //System.out.println( zahl1 + " mal wurde die 1 gewürfelt \n " + zahl2 + " mal wurde die 2 gewürfelt \n" + zahl3 + " mal wurde die 3 gewürfelt \n " + zahl4 + " mal wurde die 4 gewürfelt \n " + zahl5 + " mal wurde die 5 gewürfelt \n " + zahl6 + " mal wurde die 6 gewürfelt \n "  );
+
+            oft = oft + 1;
+        }
+        double p1 = (double) zahl1 / gewurfelt * 100;
+        System.out.println("Einsen: " + zahl1 + ",also " + p1 + "%");
+        double p2 = (double) zahl2 / gewurfelt * 100;
+        System.out.println("Zweien: " + zahl2 + ",also " + p2 + "%");
+        double p3 = (double) zahl3 / gewurfelt * 100;
+        System.out.println("Dreien: " + zahl3 + ",also " + p3 + "%");
+        double p4 = (double) zahl4 / gewurfelt * 100;
+        System.out.println("Vieren: " + zahl4 + ",also " + p4 + "%");
+        double p5 = (double) zahl5 / gewurfelt * 100;
+        System.out.println("Fuenfen: " + zahl5 + ",also " + p5 + "%");
+        double p6 = (double) zahl6 / gewurfelt * 100;
+        System.out.println("Sechsen: " + zahl6 + ",also " + p6 + "%");
+    }
+    
+    }

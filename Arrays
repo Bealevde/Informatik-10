@@ -1,0 +1,26 @@
+
+public class Arrays1
+{
+    /*
+     * Ein Array speichert mehrere Werte eines Datentyps
+     * 
+     */
+    public void arrys1(){
+        // Deklaration
+        int zahl;
+        int[] zahlen;
+
+        //Initialiisierung 
+        zahl = 5; 
+        zahlen = new int[]{1, 2, 3, 4, 5};
+
+        //Ausgabe
+        System.out.println(zahl);
+        System.out.println(zahlen[2]);
+        
+        
+        for (int i = 0; i < zahlen.length; i++) {
+            System.out.println(zahlen[i]);
+        }
+    }
+}
